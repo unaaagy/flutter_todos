@@ -1,42 +1,38 @@
 {
-    "@@locale": "es",
-    "counterAppBarTitle": "Contador",
-    "@counterAppBarTitle": {
-        "description": "Texto mostrado en la AppBar de la página del contador"
-    },
-    "todosOverviewAppBarTitle": "Flutter Tareas",
+    "@@locale": "ne",
+    "todosOverviewAppBarTitle": "फ्लटर टु-डुज",
     "@todosOverviewAppBarTitle": {
         "description": "Title text shown in the AppBar of the Todos Overview Page"
     },
-    "todosOverviewFilterTooltip": "Filtrar",
+    "todosOverviewFilterTooltip": "फिल्टर गर्नुहोस्",
     "@todosOverviewFilterTooltip": {
         "description": "Tooltip text shown in the filter dropdown of the Todos Overview Page"
     },
-    "todosOverviewFilterAll": "Todas",
+    "todosOverviewFilterAll": "सबै",
     "@todosOverviewFilterAll": {
         "description": "Text shown in the filter dropdown of the Todos Overview Page for the option to display all todos"
     },
-    "todosOverviewFilterActiveOnly": "Solo activas",
+    "todosOverviewFilterActiveOnly": "सक्रिय मात्र",
     "@todosOverviewFilterActiveOnly": {
         "description": "Text shown in the filter dropdown of the Todos Overview Page for the option to display active todos only"
     },
-    "todosOverviewFilterCompletedOnly": "Solo completadas",
+    "todosOverviewFilterCompletedOnly": "पूरा भएका मात्र",
     "@todosOverviewFilterCompletedOnly": {
         "description": "Text shown in the filter dropdown of the Todos Overview Page for the option to display completed todos only"
     },
-    "todosOverviewMarkAllCompleteButtonText": "Marcar todas como completadas",
+    "todosOverviewMarkAllCompleteButtonText": "सबैलाई पूरा भएको चिन्ह लगाउनुहोस्",
     "@todosOverviewMarkAllCompleteButtonText": {
         "description": "Button text shown in the options dropdown of the Todos Overview Page that marks all current todos as complete"
     },
-    "todosOverviewClearCompletedButtonText": "Borrar completadas",
+    "todosOverviewClearCompletedButtonText": "पूरा भएका हटाउनुहोस्",
     "@todosOverviewClearCompletedButtonText": {
         "description": "Button text shown in the options dropdown of the Todos Overview Page that deletes all completed todos"
     },
-    "todosOverviewEmptyText": "No se encontraron tareas con los filtros seleccionados.",
+    "todosOverviewEmptyText": "चयन गरिएका फिल्टरहरूसँग कुनै टु-डु फेला परेनन्।",
     "@todosOverviewEmptyText": {
         "description": "Text shown in the Todos Overview Page when no todos are found with the selected filters"
     },
-    "todosOverviewTodoDeletedSnackbarText": "Tarea \"{todoTitle}\" eliminada.",
+    "todosOverviewTodoDeletedSnackbarText": "टु-डु \"{todoTitle}\" हटाइयो।",
     "@todosOverviewTodoDeletedSnackbarText": {
         "description": "Snackbar text shown when a todo is deleted from the Todos Overview Page",
         "placeholders": {
@@ -45,79 +41,79 @@
             }
         }
     },
-    "todosOverviewUndoDeletionButtonText": "Deshacer",
+    "todosOverviewUndoDeletionButtonText": "पूर्वस्थितिमा फर्काउनुहोस्",
     "@todosOverviewUndoDeletionButtonText": {
         "description": "Button text shown in the snackbar that undoes a deletion of a todo"
     },
-    "todosOverviewErrorSnackbarText": "Ocurrió un error al cargar las tareas.",
+    "todosOverviewErrorSnackbarText": "टु-डुहरू लोड गर्दा त्रुटि भयो।",
     "@todosOverviewErrorSnackbarText": {
         "description": "Snackbar text shown when an error occurs while loading todos"
     },
-    "todosOverviewOptionsTooltip": "Opciones",
+    "todosOverviewOptionsTooltip": "विकल्पहरू",
     "@todosOverviewOptionsTooltip": {
         "description": "Tooltip text shown in the options dropdown of the Todos Overview Page"
     },
-    "todosOverviewOptionsMarkAllComplete": "Marcar todas como completadas",
+    "todosOverviewOptionsMarkAllComplete": "सबैलाई पूरा भएको चिन्ह लगाउनुहोस्",
     "@todosOverviewOptionsMarkAllComplete": {
         "description": "Button text shown in the options dropdown of the Todos Overview Page that marks all todos as complete"
     },
-    "todosOverviewOptionsMarkAllIncomplete": "Marcar todas como incompletas",
+    "todosOverviewOptionsMarkAllIncomplete": "सबैलाई अपूरा भएको चिन्ह लगाउनुहोस्",
     "@todosOverviewOptionsMarkAllIncomplete": {
         "description": "Button text shown in the options dropdown of the Todos Overview Page that marks all todos as incomplete"
     },
-    "todosOverviewOptionsClearCompleted": "Borrar completadas",
+    "todosOverviewOptionsClearCompleted": "पूरा भएका हटाउनुहोस्",
     "@todosOverviewOptionsClearCompleted": {
         "description": "Button text shown in the options dropdown of the Todos Overview Page that deletes all completed todos"
     },
-    "todoDetailsAppBarTitle": "Detalles de la tarea",
+    "todoDetailsAppBarTitle": "टु-डु विवरण",
     "@todoDetailsAppBarTitle": {
         "description": "Title text shown in the AppBar of the Todo Details Page"
     },
-    "todoDetailsDeleteButtonTooltip": "Eliminar",
+    "todoDetailsDeleteButtonTooltip": "हटाउनुहोस्",
     "@todoDetailsDeleteButtonTooltip": {
         "description": "Tooltip text shown in the delete button on the Todo Details Page"
     },
-    "todoDetailsEditButtonTooltip": "Editar",
+    "todoDetailsEditButtonTooltip": "सम्पादन गर्नुहोस्",
     "@todoDetailsEditButtonTooltip": {
         "description": "Tooltip text shown in the edit button on the Todo Details Page"
     },
-    "editTodoEditAppBarTitle": "Editar tarea",
+    "editTodoEditAppBarTitle": "टु-डु सम्पादन गर्नुहोस्",
     "@editTodoEditAppBarTitle": {
         "description": "Title text shown in the AppBar of the Todo Edit Page when editing an existing todo"
     },
-    "editTodoAddAppBarTitle": "Agregar tarea",
+    "editTodoAddAppBarTitle": "टु-डु थप्नुहोस्",
     "@editTodoAddAppBarTitle": {
         "description": "Title text shown in the AppBar of the Todo Edit Page when adding a new todo"
     },
-    "editTodoTitleLabel": "Título",
+    "editTodoTitleLabel": "शीर्षक",
     "@editTodoTitleLabel": {
         "description": "Label text shown in the title input field of the Todo Edit Page"
     },
-    "editTodoDescriptionLabel": "Descripción",
+    "editTodoDescriptionLabel": "विवरण",
     "@editTodoDescriptionLabel": {
         "description": "Label text shown in the description input field of the Todo Edit Page"
     },
-    "editTodoSaveButtonTooltip": "Guardar cambios",
+    "editTodoSaveButtonTooltip": "परिवर्तनहरू सुरक्षित गर्नुहोस्",
     "@editTodoSaveButtonTooltip": {
         "description": "Tooltip text shown in the save button on the Todo Edit Page"
     },
-    "statsAppBarTitle": "Estadísticas",
+    "statsAppBarTitle": "सांख्यिकी",
     "@statsAppBarTitle": {
         "description": "Title text shown in the AppBar of the Stats Page"
     },
-    "statsCompletedTodoCountLabel": "Tareas completadas",
+    "statsCompletedTodoCountLabel": "पूरा भएका टु-डुहरू",
     "@statsCompletedTodoCountLabel": {
         "description": "Label text shown in the completed todos count section of the Stats Page"
     },
-    "statsActiveTodoCountLabel": "Tareas activas",
+    "statsActiveTodoCountLabel": "सक्रिय टु-डुहरू",
     "@statsActiveTodoCountLabel": {
         "description": "Label text shown in the active todos count section of the Stats Page"
     },
-    "bottomAppBarLabelHome": "Inicio",
+    "bottomAppBarLabelHome": "गृहपृष्ठ",
     "@bottomAppBarLabelHome": {
     "description": "Label text shown below bottom app bar item"
   },
-    "bottomAppBarLabelStats": "Estadísticas",
+    "bottomAppBarLabelStats": "सांख्यिकी",
     "@bottomAppBarLabelStats": {
     "description": "Label text shown below bottom app bar stats item"
   }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_todos/home/home.dart';
+import 'package:flutter_todos/l10n/l10n.dart';
 import 'package:flutter_todos/stats/stats.dart';
 import 'package:flutter_todos/todos_overview/todos_overview.dart';
 import 'package:forui/forui.dart';
@@ -22,10 +23,14 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final selectedTab = context.select((HomeCubit cubit) => cubit.state.tab);
+    final l10n = context.l10n;
 
     return FScaffold(
       child: Scaffold(
-        body: IndexedStack(index: selectedTab.index, children: const [TodosOverviewPage(), StatsPage()]),
+        body: IndexedStack(
+          index: selectedTab.index,
+          children: const [TodosOverviewPage(), StatsPage()],
+        ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         floatingActionButton: FloatingActionButton(
           shape: const CircleBorder(),
@@ -36,10 +41,18 @@ class HomeView extends StatelessWidget {
       ),
       footer: FBottomNavigationBar(
         index: selectedTab.index,
-        onChange: (value) => context.read<HomeCubit>().setTab(value == 0 ? HomeTab.todos : HomeTab.stats),
+        onChange: (value) => context.read<HomeCubit>().setTab(
+          value == 0 ? HomeTab.todos : HomeTab.stats,
+        ),
         children: [
-          FBottomNavigationBarItem(label: Text('Home'), icon: Icon(FLucideIcons.list)),
-          FBottomNavigationBarItem(label: Text('Stats'), icon: Icon(FLucideIcons.chartArea)),
+          FBottomNavigationBarItem(
+            label: Text(l10n.bottomAppBarLabelHome),
+            icon: Icon(FLucideIcons.list),
+          ),
+          FBottomNavigationBarItem(
+            label: Text(l10n.bottomAppBarLabelStats),
+            icon: Icon(FLucideIcons.chartArea),
+          ),
         ],
       ),
     );
