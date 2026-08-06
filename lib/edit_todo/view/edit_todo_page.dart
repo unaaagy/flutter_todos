@@ -41,9 +41,11 @@ class EditTodoView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = context.l10n;
-    final status = context.select((EditTodoBloc bloc) => bloc.state.status);
-    final isNewTodo = context.select(
-      (EditTodoBloc bloc) => bloc.state.isNewTodo,
+    final status = context.select<EditTodoBloc, EditTodoStatus>(
+      (bloc) => bloc.state.status,
+    );
+    final isNewTodo = context.select<EditTodoBloc, bool>(
+      (bloc) => bloc.state.isNewTodo,
     );
 
     return FScaffold(
@@ -52,7 +54,7 @@ class EditTodoView extends StatelessWidget {
           FButton.icon(
             variant: .ghost,
             onPress: () => Navigator.pop(context),
-            child: Icon(FLucideIcons.chevronLeft),
+            child: const Icon(FLucideIcons.chevronLeft),
           ),
         ],
         title: Text(
@@ -76,7 +78,7 @@ class EditTodoView extends StatelessWidget {
               ? const CupertinoActivityIndicator()
               : const Icon(FLucideIcons.check),
         ),
-        body: Scrollbar(
+        body: const Scrollbar(
           child: SingleChildScrollView(
             child: Padding(
               padding: EdgeInsets.all(16),

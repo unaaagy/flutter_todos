@@ -14,7 +14,7 @@ dependencies:
   flutter_bloc: ^9.1.1
   flutter_localizations:
     sdk: flutter
-  forui: ^0.24.3
+  forui: ^0.25.0
   intl: ^0.20.2
   local_storage_todos_api:
     path: packages/local_storage_todos_api
@@ -30,6 +30,7 @@ dev_dependencies:
     sdk: flutter
   mockingjay: ^2.0.0
   mocktail: ^1.0.0
+  very_good_analysis: ^10.3.0
 
 flutter:
   uses-material-design: true

@@ -26,7 +26,7 @@ class TodoListTile extends StatelessWidget {
         FLucideIcons.delete,
         color: context.theme.colors.destructive,
       ),
-      child: FTile(
+      child: FItem(
         onPress: onTap,
         title: Text(
           todo.title,

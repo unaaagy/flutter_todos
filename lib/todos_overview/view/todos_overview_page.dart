@@ -67,7 +67,7 @@ class TodosOverviewView extends StatelessWidget {
                   l10n.todosOverviewTodoDeletedSnackbarText(deletedTodo.title),
                 ),
                 icon: const Icon(FLucideIcons.info),
-                duration: Duration(seconds: 3),
+                duration: const Duration(seconds: 3),
                 suffixBuilder: (context, entry) => IntrinsicHeight(
                   child: FButton(
                     onPress: () {
@@ -97,7 +97,7 @@ class TodosOverviewView extends StatelessWidget {
 
             return Scrollbar(
               child: ConstrainedBox(
-                constraints: BoxConstraints(maxWidth: 600),
+                constraints: const BoxConstraints(maxWidth: 600),
                 child: FItemGroup.builder(
                   count: state.filteredTodos.length,
                   itemBuilder: (_, index) {
@@ -117,8 +117,8 @@ class TodosOverviewView extends StatelessWidget {
                           TodosOverviewTodoDeleted(todo),
                         );
                       },
-                      onTap: () {
-                        Navigator.of(
+                      onTap: () async {
+                        await Navigator.of(
                           context,
                         ).push(EditTodoPage.route(initialTodo: todo));
                       },

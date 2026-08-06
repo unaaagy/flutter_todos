@@ -7,14 +7,14 @@ environment:
   sdk: ^3.12.0
 
 dependencies:
-  forui: ^0.24.3
   todos_api:
     path: ../todos_api
 
 dev_dependencies:
-  forui_cli: ^0.24.0
   mocktail: ^1.0.5
   test: ^1.21.4
+  very_good_analysis: ^10.3.0
+
 flutter:
   fonts:
     - family: Lora

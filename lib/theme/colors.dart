@@ -6,42 +6,42 @@ part of 'theme.dart';
 final FColors lightColors = FColors(
   brightness: .light,
   systemOverlayStyle: .dark,
-  barrier: Color(0x33000000),
-  background: Color(0xFFFFFFFF),
-  foreground: Color(0xFF0A0A0A),
-  primary: Color(0xFF1447E6),
-  primaryForeground: Color(0xFFEFF6FF),
-  secondary: Color(0xFFF5F5F5),
-  secondaryForeground: Color(0xFF171717),
-  muted: Color(0xFFF5F5F5),
-  mutedForeground: Color(0xFF737373),
-  destructive: Color(0xFFE7000B),
-  destructiveForeground: Color(0xFFFAFAFA),
-  error: Color(0xFFE7000B),
-  errorForeground: Color(0xFFFAFAFA),
-  card: Color(0xFFFFFFFF),
-  border: Color(0xFFE5E5E5),
+  barrier: const Color(0x33000000),
+  background: const Color(0xFFFFFFFF),
+  foreground: const Color(0xFF0A0A0A),
+  primary: const Color(0xFF1447E6),
+  primaryForeground: const Color(0xFFEFF6FF),
+  secondary: const Color(0xFFF5F5F5),
+  secondaryForeground: const Color(0xFF171717),
+  muted: const Color(0xFFF5F5F5),
+  mutedForeground: const Color(0xFF737373),
+  destructive: const Color(0xFFE7000B),
+  destructiveForeground: const Color(0xFFFAFAFA),
+  error: const Color(0xFFE7000B),
+  errorForeground: const Color(0xFFFAFAFA),
+  card: const Color(0xFFFFFFFF),
+  border: const Color(0xFFE5E5E5),
   extensions: const [AppColors()],
 );
 
 final FColors darkColors = FColors(
   brightness: .dark,
   systemOverlayStyle: .light,
-  barrier: Color(0x7A000000),
-  background: Color(0xFF0A0A0A),
-  foreground: Color(0xFFFAFAFA),
-  primary: Color(0xFF193CB8),
-  primaryForeground: Color(0xFFEFF6FF),
-  secondary: Color(0xFF262626),
-  secondaryForeground: Color(0xFFFAFAFA),
-  muted: Color(0xFF262626),
-  mutedForeground: Color(0xFFA1A1A1),
-  destructive: Color(0xFFFF6467),
-  destructiveForeground: Color(0xFFFAFAFA),
-  error: Color(0xFFFF6467),
-  errorForeground: Color(0xFFFAFAFA),
-  card: Color(0xFF171717),
-  border: Color(0x1AFFFFFF),
+  barrier: const Color(0x7A000000),
+  background: const Color(0xFF0A0A0A),
+  foreground: const Color(0xFFFAFAFA),
+  primary: const Color(0xFF193CB8),
+  primaryForeground: const Color(0xFFEFF6FF),
+  secondary: const Color(0xFF262626),
+  secondaryForeground: const Color(0xFFFAFAFA),
+  muted: const Color(0xFF262626),
+  mutedForeground: const Color(0xFFA1A1A1),
+  destructive: const Color(0xFFFF6467),
+  destructiveForeground: const Color(0xFFFAFAFA),
+  error: const Color(0xFFFF6467),
+  errorForeground: const Color(0xFFFAFAFA),
+  card: const Color(0xFF171717),
+  border: const Color(0x1AFFFFFF),
   extensions: const [AppColors()],
 );
 
@@ -61,10 +61,12 @@ extension FColorsExtensions on FColors {
 
 /// Custom color tokens unique to your app.
 ///
-/// Add your fields below, then implement [copyWith], [lerp], [==], and [hashCode].
+/// Add your fields below, then implement [copyWith], [lerp], [==], and
+/// [hashCode].
 /// See https://api.flutter.dev/flutter/material/ThemeExtension-class.html.
+
+@immutable
 class AppColors extends ThemeExtension<AppColors> {
-  // TODO: add your color fields here:
   // final Color accent;
 
   const AppColors();

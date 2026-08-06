@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_todos/edit_todo/view/edit_todo_page.dart';
 import 'package:flutter_todos/home/home.dart';
 import 'package:flutter_todos/l10n/l10n.dart';
 import 'package:flutter_todos/stats/stats.dart';
 import 'package:flutter_todos/todos_overview/todos_overview.dart';
 import 'package:forui/forui.dart';
-
-import '../../edit_todo/view/edit_todo_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -22,10 +21,28 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final selectedTab = context.select((HomeCubit cubit) => cubit.state.tab);
+    final selectedTab = context.select<HomeCubit, HomeTab>(
+      (cubit) => cubit.state.tab,
+    );
     final l10n = context.l10n;
 
     return FScaffold(
+      footer: FBottomNavigationBar(
+        index: selectedTab.index,
+        onChange: (value) => context.read<HomeCubit>().setTab(
+          value == 0 ? HomeTab.todos : HomeTab.stats,
+        ),
+        children: [
+          FBottomNavigationBarItem(
+            label: Text(l10n.bottomAppBarLabelHome),
+            icon: const Icon(FLucideIcons.list),
+          ),
+          FBottomNavigationBarItem(
+            label: Text(l10n.bottomAppBarLabelStats),
+            icon: const Icon(FLucideIcons.chartArea),
+          ),
+        ],
+      ),
       child: Scaffold(
         body: IndexedStack(
           index: selectedTab.index,
@@ -38,22 +55,6 @@ class HomeView extends StatelessWidget {
           onPressed: () => Navigator.of(context).push(EditTodoPage.route()),
           child: const Icon(Icons.add),
         ),
-      ),
-      footer: FBottomNavigationBar(
-        index: selectedTab.index,
-        onChange: (value) => context.read<HomeCubit>().setTab(
-          value == 0 ? HomeTab.todos : HomeTab.stats,
-        ),
-        children: [
-          FBottomNavigationBarItem(
-            label: Text(l10n.bottomAppBarLabelHome),
-            icon: Icon(FLucideIcons.list),
-          ),
-          FBottomNavigationBarItem(
-            label: Text(l10n.bottomAppBarLabelStats),
-            icon: Icon(FLucideIcons.chartArea),
-          ),
-        ],
       ),
     );
   }
