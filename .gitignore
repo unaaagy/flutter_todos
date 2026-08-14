@@ -20,7 +20,6 @@ migrate_working_dir/
 .classpath
 .project
 .settings/
-.vscode/*
 
 # packages file containing multi-root paths
 .packages.generated
@@ -113,5 +112,3 @@ app.*.map.json
 
 # Generated l10n files
 lib/l10n/gen/
-/.idea/
-/.vscode/
