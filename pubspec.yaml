@@ -15,7 +15,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   forui: ^0.25.0
-  intl: ^0.20.2
+  intl: ^0.20.3
   local_storage_todos_api:
     path: packages/local_storage_todos_api
   todos_api:
